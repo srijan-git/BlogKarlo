@@ -1,0 +1,50 @@
+<div class="row mt-5">
+    <i class="fa fa-user-circle-o" style="font-size: 120px;" aria-hidden="true"></i>
+    <div class="offset-sm-1 col-sm-10 mt-4 mb-5">
+        <div class="card text-blank">
+            <div class="card-body">
+                <!-- <div class="card-title text-center">
+                    
+                    <h1>Profile</h1>
+                </div> -->
+                <!-- <hr /> -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-sm-3 text-center">
+                            <img src="{{photoURL}}" height="256" width="256" class="rounded-circle">
+                        </div>
+
+                        <div class="offset-sm-1 col-sm-8 mt-4">
+                            <h1>{{firstName + " "+ lastName}}</h1>
+
+                            <h4>{{ Email }}</h4>
+
+                            <h5>{{ Bio }}</h5>
+
+                            <p>{{ Interests }}</p>
+
+                            <span class="badge badge-pill badge-primary badge-lg ml-2" *ngFor="let hobby of Hobbies">
+                                {{hobby }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="row mt-4">
+    <div class="offset-sm-1 col-sm-10">
+        <div class="card text-blank">
+            <div class="card-body">
+                <div class="card-title">
+
+                </div>
+                <div class="card-text">
+                    <app-post></app-post>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

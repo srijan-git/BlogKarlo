@@ -1,0 +1,23 @@
+.vl {
+    border-right: 1px solid #ddd;
+}
+
+@media (max-width: 480px) {
+    .text-right {
+        text-align: center !important;
+    }
+
+    .vl {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .align {
+        text-align: center !important;
+    }
+}
+@media (max-width: 767px) {
+    .scribeImage{
+        text-align: center !important;
+    }
+}

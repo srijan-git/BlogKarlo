@@ -1,0 +1,54 @@
+.background-left {
+    background-color: #2e7cf6;
+    background-image: url('../../../../assets/Sign-Up-BG-Image.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+}
+
+.background-right {
+    background-color: #2e7cf6;
+}
+
+.card {
+    background-color: transparent;
+    color: #fff;
+}
+
+.text-muted {
+    color: #fff !important;
+}
+
+.btn[type=submit] {
+    border-radius: 50px;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+}
+
+/* .eyeHideAndShow{
+    display: flex;
+}
+
+.eyeHideAndShow input{
+    width: 90%;
+}
+
+.eyeHideAndShow a{
+    display: inline;
+    margin-left: 20px;
+} */
+
+@media (max-width: 480px) {
+    .background-left{
+        background-image: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .background-left{
+        background-image: none;
+    }
+}

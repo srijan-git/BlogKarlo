@@ -1,0 +1,64 @@
+<div class="row mt-5">
+    <i class="fa fa-user-circle-o" style="font-size: 120px;" aria-hidden="true"></i>
+    <div class="offset-sm-1 col-sm-10 mt-4">
+        <div class="card text-blank">
+            <div class="card-body">
+                <!-- <div class="card-title text-center">
+                    
+                    <h1>Profile</h1>
+                </div> -->
+                <!-- <hr /> -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-sm-3 text-center">
+                            <img src="{{photoURL}}" height="256" width="256" class="rounded-circle">
+                        </div>
+
+                        <div class="offset-sm-1 col-sm-8 mt-4">
+                            <h1>{{firstName + " "+ lastName}}</h1>
+
+                            <h5>{{ Bio }}</h5>
+
+                            <span class="badge badge-pill badge-primary badge-lg ml-2" *ngFor="let hobby of Hobbies">
+                                {{hobby }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row mt-4">
+    <div class="offset-sm-1 col-sm-10">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title">
+                    <h3>Posted by {{firstName}} ({{writersPostLength}})</h3>
+                </div>
+                <div class="card-text" *ngFor="let p of writersPost">
+                    <!-- {{p.Description}} -->
+
+                    <div class="card text-blank mt-3">
+                        <div class=" card-body">
+                            <div class="card-title">
+                                <h2> {{p.Title}}</h2>
+                            </div>
+                            <div class="card-text">
+                                <span [innerHTML]="p.Description.substring(0, 50)"></span>... <a class="card-link"
+                                    routerLink="/view/{{p.PostID}}/{{p.UserID}}">Read More</a>
+                            </div>
+
+                        </div>
+
+                        <div class="card-footer text-muted">
+                            Posted on {{ p.Date | date: 'MMM dd, yyyy' }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

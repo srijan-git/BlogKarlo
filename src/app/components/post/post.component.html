@@ -1,0 +1,23 @@
+<div class="card text-blank mt-3" *ngFor="let posts of allPosts">
+    <div class=" card-body">
+        <div class="card-title">
+            <h2> {{posts.Title}}</h2>
+        </div>
+        <div class="card-text">
+            <span [innerHTML]="posts.Description.substring(0, 50)"></span>... <a class="card-link"
+                routerLink="/view/{{ posts._id }}/{{userid}}">Read More</a>
+        </div>
+
+    </div>
+
+    <div class="card-footer text-muted">
+        Posted on {{ posts.Date | date: 'MMM dd, yyyy' }}
+
+        <button type="button" class="btn btn-danger card-link btn-sm float-right" *ngIf="posts.userID == userid"
+            (click)="deletepost(posts._id)">Delete</button>
+
+    </div>
+
+    <a class="card-footer text-muted" *ngIf="posts.userID != userid" routerLink="/writersView/{{posts._id}}">View Writer's Profile</a>
+
+</div>

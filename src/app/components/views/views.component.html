@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row mt-5 jumbotron">
+        <div class="col-sm-4 text-center">
+            <img [src]="photoURL" alt="User Image" height="256" width="250" class="shadow p-3 mb-5 bg-white rounded">
+        </div>
+        <div class="col-sm-8">
+            <h1>{{ Title }}</h1>
+            <div [innerHTML]="Description" class="mb-5"></div>
+            <div class="text-right">
+                <h5 style="font-weight: 700;">Created By - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+                <p>{{firstName+" "+lastName}}, {{ Date | date: 'MMM dd, yyyy' }}</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="offset-sm-2 col-sm-8 mb-5">
+            <app-comments [postIdForComment]="postIdForComment"></app-comments>
+        </div>
+    </div>
+</div>
