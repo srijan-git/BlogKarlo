@@ -8,8 +8,8 @@ import { Comments } from '../Class/comments';
   providedIn: 'root'
 })
 export class CommentsService {
-  AddingComments = "http://localhost:3500/commentCreation";
-  CommentDetails = "http://localhost:3500/CommentDetails"
+  AddingComments = "https://bog-karlo.herokuapp.com/commentCreation";
+  CommentDetails = "https://bog-karlo.herokuapp.com/CommentDetails"
   // GetCommentsByPostID="http://localhost:3500/commentGet"
   constructor(private http: HttpClient) { }
 

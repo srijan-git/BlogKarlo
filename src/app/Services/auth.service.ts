@@ -9,11 +9,11 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  signupAPIUrl = "http://localhost:3500/postForm"
-  signinAPIUrl = "http://localhost:3500/postLogin"
-  getallUser = "http://localhost:3500/getUserData"
-  getEditedUserData = "http://localhost:3500/getEditedUserData"
-  UserUpdate = "http://localhost:3500/postuserEdit"
+  signupAPIUrl = "https://bog-karlo.herokuapp.com/postForm"
+  signinAPIUrl = "https://bog-karlo.herokuapp.com/postLogin"
+  getallUser = "https://bog-karlo.herokuapp.com/getUserData"
+  getEditedUserData = "https://bog-karlo.herokuapp.com/getEditedUserData"
+  UserUpdate = "https://bog-karlo.herokuapp.com/postuserEdit"
 
   postSignup(formData): Observable<User[]> {
     return this.http.post<User[]>(this.signupAPIUrl, formData)
