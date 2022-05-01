@@ -47,6 +47,11 @@
                                 <div class="form-group eyeHideAndShow">
                                     <input type="password" class="form-control" placeholder="Password" name="password"
                                         formControlName="password">
+                                    <small class="form-text text-muted">
+                                        *Minimum eight characters, at least one uppercase
+                                        letter, one lowercase letter, one
+                                        number and one special character:
+                                    </small>
                                     <!-- <a>
                                         <i class="fa fa-eye" aria-hidden="true" (click)="toggleShow()"
                                         *ngIf="showPassword"></i>
@@ -75,15 +80,9 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="alert alert-success" *ngIf="message.length > 0">
-                    {{ message }}
+                <div class="alert alert-danger" *ngIf="Errormessage">
+                    {{Errormessage }}
                 </div>
-
-                <!-- <div class="alert alert-danger" *ngIf="userError">
-                    {{userError }}
-                </div> -->
-
             </div>
         </div>
     </div>

@@ -8,10 +8,12 @@ import { AuthService } from 'src/app/Services/auth.service';
   styleUrls: ['./edit-profile.component.css']
 })
 export class EditProfileComponent implements OnInit {
-  isShown: boolean = false;
+  // isShown: boolean = false;
   updateForm: FormGroup;
   data: any;
   updateData: any;
+  message: string;
+
   constructor(private fb: FormBuilder, private auth: AuthService, private activerouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
@@ -39,6 +41,7 @@ export class EditProfileComponent implements OnInit {
   // }
 
   UpdateData() {
+    this.message = "Updating Profile...";
     const formData = new FormData()
     formData.append('UserID', this.updateForm.get('UserID').value);
     formData.append('firstname', this.updateForm.get('firstname').value);
@@ -47,8 +50,11 @@ export class EditProfileComponent implements OnInit {
     formData.append('bio', this.updateForm.get('bio').value);
     formData.append('interests', this.updateForm.get('interests').value);
     formData.append('hobbies', this.updateForm.get('hobbies').value);
+
     this.auth.updateData(formData).subscribe((res) => {
-      // this.router.navigate(['/myblogs'])
+      if (res) {
+        this.message = "Profile Updated Successfully.";
+      }
       window.location.reload()
     })
   }

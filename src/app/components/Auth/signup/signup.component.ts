@@ -10,8 +10,7 @@ import { AuthService } from 'src/app/Services/auth.service';
 })
 export class SignupComponent implements OnInit {
   signupValue: FormGroup;
-  Errormessage: string = "";
-  userError: any;
+  Errormessage: any;
   message: any = [];
 
   constructor(public fb: FormBuilder, private authService: AuthService, public router: Router) { }
@@ -32,7 +31,13 @@ export class SignupComponent implements OnInit {
         alert(`${this.message.message}`)
         this.router.navigate(["/login"])
       }
-    })
+    }, error => {
+      this.Errormessage = error.error.message
+      console.log(this.Errormessage);
+
+    }
+
+    )
   }
 
 }

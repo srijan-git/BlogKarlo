@@ -10,11 +10,12 @@ import { SessionService } from 'src/app/Services/session.service';
 export class LoginComponent implements OnInit {
   loginresponse;
   message: string = "";
+  Errormessage: any;
   userID = window.localStorage.getItem('userId');
 
   constructor(private authservice: AuthService, private router: Router, private session: SessionService) {
     if (localStorage.getItem('token')) {
-      router.navigate(['/myblogs',this.userID]);
+      router.navigate(['/myblogs', this.userID]);
     }
   }
 
@@ -27,6 +28,8 @@ export class LoginComponent implements OnInit {
       console.log(this.loginresponse)
       this.session.SetgetResponseFormLogin(this.loginresponse.token, this.loginresponse.result._id)
       window.location.reload();
+    }, error => {
+      this.Errormessage = error.error.message
     })
   }
 }
