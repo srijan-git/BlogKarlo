@@ -6,7 +6,7 @@ import { HeaderComponent } from './Layout/header/header.component';
 import { LoginComponent } from './components/Auth/login/login.component';
 import { SignupComponent } from './components/Auth/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MyBlogsComponent } from './components/my-blogs/my-blogs.component';
 import { CreatepostComponent } from './components/createpost/createpost.component';
@@ -18,7 +18,8 @@ import { PostComponent } from './components/post/post.component';
 import { ViewsComponent } from './components/views/views.component';
 import { WritersProfileComponent } from './components/writers-profile/writers-profile.component';
 import { CommentsComponent } from './components/comments/comments.component';
-
+import { LoaderComponent } from './Layout/loader/loader.component';
+import { LoaderIntercepterService } from './Services/loader-intercepter.service';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,8 @@ import { CommentsComponent } from './components/comments/comments.component';
     PostComponent,
     ViewsComponent,
     WritersProfileComponent,
-    CommentsComponent
-
+    CommentsComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +47,7 @@ import { CommentsComponent } from './components/comments/comments.component';
     AppRoutingModule
 
   ],
-  providers: [AuthService],
+  providers: [AuthService, { provide: HTTP_INTERCEPTORS, useClass: LoaderIntercepterService, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

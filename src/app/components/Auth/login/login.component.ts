@@ -30,6 +30,8 @@ export class LoginComponent implements OnInit {
       window.location.reload();
     }, error => {
       this.Errormessage = error.error.message
+      alert(`${this.Errormessage}`)
+      window.location.reload();
     })
   }
 }

@@ -12,7 +12,7 @@
 
                         <div class="form-group">
                             <input type="email" ngModel name="email" #email="ngModel" class="form-control"
-                                placeholder="Enter email" name="email">
+                                placeholder="Enter email" name="email" autocomplete="off">
                         </div>
 
                         <!-- <div class="alert alert-danger"
@@ -44,9 +44,9 @@
             </div>
         </div>
 
-        <div class="alert alert-danger" *ngIf="Errormessage">
+        <!-- <div class="alert alert-danger" *ngIf="Errormessage">
             {{ Errormessage }}
-        </div>
+        </div> -->
 
     </div>
 </div>
