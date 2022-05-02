@@ -2,6 +2,11 @@
     border-right: 1px solid #ddd;
 }
 
+.myLinkedin {
+    text-decoration: none;
+    color: black;
+}
+
 @media (max-width: 480px) {
     .text-right {
         text-align: center !important;
@@ -16,8 +21,9 @@
         text-align: center !important;
     }
 }
+
 @media (max-width: 767px) {
-    .scribeImage{
+    .scribeImage {
         text-align: center !important;
     }
 }
