@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from '../Class/user';
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,7 @@ import { User } from '../Class/user';
 export class AuthService {
 
   constructor(private http: HttpClient) { }
+  loader = new BehaviorSubject<Boolean>(false);
 
   signupAPIUrl = "https://bog-karlo.herokuapp.com/postForm"
   signinAPIUrl = "https://bog-karlo.herokuapp.com/postLogin"
