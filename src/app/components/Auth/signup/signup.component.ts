@@ -21,8 +21,31 @@ export class SignupComponent implements OnInit {
       lastname: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$')]],
       password: ['', [Validators.required, Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/)]],
-    });
+      confirmPassword: ['', [Validators.required]]
+    },
+      {
+        validator: this.checkIfMatchingPasswords("password", "confirmPassword")
+      });
   }
+
+
+  checkIfMatchingPasswords(passwordKey: string, confirmPasswordKey: string) {
+    return (group: FormGroup) => {
+      let password = group.controls[passwordKey];
+      let confirmPassword = group.controls[confirmPasswordKey];
+
+      if (password.value == confirmPassword.value) {
+        return;
+      } else {
+        confirmPassword.setErrors({
+          notEqualToPassword: true
+        })
+      }
+
+    }
+  }
+
+
 
   register() {
     this.authService.postSignup(this.signupValue.value).subscribe((res) => {

@@ -1,12 +1,23 @@
-
 nav {
     border-bottom: 1px solid #6ca3f9;
 }
 
-.nav-link{
+.nav-link {
     color: white !important;
+
 }
 
-img{
+img {
     height: 60px;
+}
+
+.active {
+    border: 3px solid;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:991px) {
+    .nav-link {
+        text-align: center;
+    }
 }
