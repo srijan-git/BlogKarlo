@@ -1,40 +1,14 @@
 <div class="row mt-5">
     <div class="col">
-
-        <!-- <div class="form-group">
-            <label>Post Title</label>
-            <input type="text" class="form-control" id="title" placeholder="Post Title" name="title"
-                [(ngModel)]="title">
-        </div>
-
-        <div class="form-group">
-            <label>Post Content</label>
-            <angular-editor [config]="config" [placeholder]="'Enter text here...'" [(ngModel)]="content">
-            </angular-editor>
-        </div> -->
-
-        <!-- <div class="form-group float-right">
-            <button (click)="createPost()" class="btn btn-warning round">Submit</button>
-        </div> -->
-
         <form class="form-group" [formGroup]="CreatedData" (submit)="createPost()" enctype="multipart/form-data">
             <label for="title">Post Title</label>
             <input type="text" class="form-control" id="title" placeholder="Post Title" name="title"
                 formControlName="title">
             <label for="description" class="mt-4">Post Content</label>
-            <textarea type="text" class="form-control" id="description" placeholder="Write here.." name="description"
-                formControlName="description" rows="10"></textarea>
+            <!-- <textarea type="text" class="form-control" id="description" placeholder="Write here.." name="description"
+                formControlName="description" rows="10"></textarea> -->
+            <angular-editor formControlName="description" [config]="editorConfig"></angular-editor>
 
-            <!-- <angular-editor [config]="config" [placeholder]="'Enter text here...'" [(ngModel)]="content">
-            </angular-editor> -->
-            <!-- <input class="form-control" type="text" name="title" formControlName="title"
-                placeholder="Enter The product name">
-            <input type="text" class="form-control mt-3" name="description" formControlName="description"
-                placeholder="Enter The description">
-            <input class="form-control  mt-3 p-3" type="file" name="ProductImg" formControlName="ProductImg"
-                (change)="onFileChange($event)" placeholder=" Enter The ProducImg">
-            <input class="form-control  mt-3" type="text" name="ProductPrice" formControlName="ProductPrice"
-                placeholder="Enter The ProductPrice"> -->
             <input class="btn btn-warning btnRound float-right mt-3" type="submit">
         </form>
 

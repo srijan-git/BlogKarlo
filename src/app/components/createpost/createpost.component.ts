@@ -1,9 +1,8 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { Router } from '@angular/router';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { BlogPostService } from 'src/app/Services/blog-post.service';
-
 @Component({
   selector: 'app-createpost',
   templateUrl: './createpost.component.html',
@@ -14,6 +13,17 @@ export class CreatepostComponent implements OnInit {
   userID: any;
   userLoginCred = window.localStorage.getItem('userId');
   message;
+
+  editorConfig: AngularEditorConfig = {
+    editable: true,
+    spellcheck: true,
+    height: '15rem',
+    minHeight: '5rem',
+    maxHeight: '15rem',
+    placeholder: 'Enter text here...',
+  };
+
+
 
   constructor(private fb: FormBuilder, private BlogContent: BlogPostService, public router: Router) {
     this.CreatedData = this.fb.group({
