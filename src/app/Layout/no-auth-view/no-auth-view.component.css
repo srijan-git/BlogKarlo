@@ -37,7 +37,7 @@ ul {
     list-style: none;
 }
 
-.btn {
+.btn-warning {
     display: inline-block;
     border: 0;
     background: #f5c42f;
@@ -146,6 +146,18 @@ ul {
     font-size: 15px;
     cursor: pointer;
     color: #f5c42f;
+}
+
+.viewmore {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-light {
+    background: none;
+    padding: .75rem 2rem;
+    border-radius: 20px;
+    color: #c5bbec;
 }
 
 /* Footer */

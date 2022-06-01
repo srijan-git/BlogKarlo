@@ -3,7 +3,7 @@
         <div class="content rellax" data-rellax-speed="5">
             <h1>Blog Karlo</h1>
             <p>Community Based Blogging Website</p>
-            <a routerLink="/login" class="btn btn-warning">Click here TO Learn more</a>
+            <a routerLink="/login" class="btn btn-warning">Click here TO Explore</a>
         </div>
     </section>
     <section class="section section-stream">
@@ -49,11 +49,11 @@
         </div>
     </section>
 
-    <div class="col">
-        <h2 class="text-center secondary-text mb-5" data-aos="fade-down" data-aos-duration="1000">Blogs . </h2>
+    <div class="col-md-12">
+        <h2 class="text-center secondary-text mb-5" data-aos="fade-down" data-aos-duration="1000">Featured Blogs . </h2>
         <div class="row">
             <section class="section section-grid" data-aos="zoom-out" data-aos-duration="1500">
-                <div class="rellax" data-rellax-speed="1" data-rellax-xs-speed="3" *ngFor="let p of allPosts">
+                <div class="rellax" data-rellax-speed="1" data-rellax-xs-speed="3" *ngFor="let p of SamplePosts">
                     <h2>{{p.Title}}</h2>
                     <span [innerHTML]="p.Description.substring(0, 50)"></span>... <a class="card-link"
                         routerLink="/login">Read More</a>
@@ -66,9 +66,13 @@
                 </div>
             </section>
         </div>
+        <div class="col-md-12 viewmore mb-5">
+            <a routerLink="/login" class="btn btn-light mt-4 mb-5" data-aos="fade-down" data-aos-duration="1500">View
+                more</a>
+        </div>
     </div>
 
     <footer class="footer">
-        <p class="text-center">Made With&nbsp;❤️ By Srijan, Kankana, Sujauddin, Debolina, Nimesh </p>
+        <p class="text-center">Made With&nbsp;❤️ By Srijan </p>
     </footer>
 </div>

@@ -10,10 +10,13 @@ import * as AOS from 'aos'
 export class NoAuthViewComponent implements OnInit {
   rellax: any;
   allPosts: any;
+  SamplePosts: any = []
   constructor(private postService: BlogPostService) {
     this.postService.GetAllPosts().subscribe(res => {
       this.allPosts = res.postDetails;
-      console.log(this.allPosts);
+      for (let i = 0; i < 3; i++) {
+        this.SamplePosts.push({ Title: this.allPosts[i].Title, Date: this.allPosts[i].Date, Description: this.allPosts[i].Description })
+      }
     })
   }
 
