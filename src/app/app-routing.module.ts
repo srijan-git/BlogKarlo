@@ -9,10 +9,11 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ViewsComponent } from './components/views/views.component';
 import { WritersProfileComponent } from './components/writers-profile/writers-profile.component';
 import { AuthGuard } from './Guard/auth.guard';
+import { NoAuthViewComponent } from './Layout/no-auth-view/no-auth-view.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'home', pathMatch: 'full'
+    path: '', redirectTo: 'noauthview', pathMatch: 'full'
   }, {
     path: 'home', component: HomeComponent
   }, {
@@ -34,6 +35,9 @@ const routes: Routes = [
   },
   {
     path: 'writersView/:postId', component: WritersProfileComponent
+  },
+  {
+    path: 'noauthview', component: NoAuthViewComponent
   },
   {
     path: '**', redirectTo: 'home'

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <div class="container">
-        <a class="navbar-brand" routerLink="/myblogs/{{userID}}"><img src="../../../assets/Blog-logo.png" alt=""
+        <a class="navbar-brand" routerLink="/myblogs/{{userID}}"><img src="../../../assets/Blog-logo-white.png" alt=""
                 srcset=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,19 +9,25 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/myblogs/{{userID}}" routerLinkActive="active" *ngIf="loggedIn" >My Blogs</a>
+                    <a class="nav-link" routerLink="/myblogs/{{userID}}" routerLinkActive="active" *ngIf="loggedIn">My
+                        Blogs</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/noauthview" routerLinkActive="active" *ngIf="!loggedIn">Home<span
+                            class="sr-only">(current)</span></a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/login" routerLinkActive="active" *ngIf="!loggedIn">Login<span
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/profile/{{userID}}" routerLinkActive="active" *ngIf="loggedIn">My Profile</a>
+                    <a class="nav-link" routerLink="/profile/{{userID}}" routerLinkActive="active" *ngIf="loggedIn">My
+                        Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" (click)="logout()" href="/login" *ngIf="loggedIn">Logout</a>
+                    <a class="nav-link" (click)="logout()" href="/noauthview" *ngIf="loggedIn">Logout</a>
                 </li>
             </ul>
         </div>

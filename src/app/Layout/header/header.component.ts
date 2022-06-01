@@ -15,11 +15,11 @@ export class HeaderComponent implements OnInit {
       this.loggedIn = true;
     }
   }
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   logout(): void {
     this.session.removeToken()
     this.loggedIn = false;
-    this.router.navigate(['/login'])
+    this.router.navigate(['/noauthview'])
   }
 }

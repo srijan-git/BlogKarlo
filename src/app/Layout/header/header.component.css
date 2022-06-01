@@ -1,5 +1,9 @@
 nav {
-    border-bottom: 1px solid #6ca3f9;
+    border-bottom: 1px solid #514680;
+}
+
+.bg-primary {
+    background: #2d2254 !important;
 }
 
 .nav-link {
@@ -8,7 +12,7 @@ nav {
 }
 
 img {
-    height: 60px;
+    height: 55px;
 }
 
 .active {

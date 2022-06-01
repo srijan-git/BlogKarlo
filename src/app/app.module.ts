@@ -20,6 +20,7 @@ import { WritersProfileComponent } from './components/writers-profile/writers-pr
 import { CommentsComponent } from './components/comments/comments.component';
 import { LoaderComponent } from './Layout/loader/loader.component';
 import { LoaderIntercepterService } from './Services/loader-intercepter.service';
+import { NoAuthViewComponent } from './Layout/no-auth-view/no-auth-view.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { LoaderIntercepterService } from './Services/loader-intercepter.service'
     ViewsComponent,
     WritersProfileComponent,
     CommentsComponent,
-    LoaderComponent
+    LoaderComponent,
+    NoAuthViewComponent
   ],
   imports: [
     BrowserModule,

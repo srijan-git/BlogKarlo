@@ -1,0 +1,70 @@
+<div class="collection">
+    <section class="section section-top">
+        <div class="content rellax" data-rellax-speed="5">
+            <h1>Blog Karlo</h1>
+            <p>Community Based Blogging Website</p>
+            <a routerLink="/login" class="btn btn-warning">Click here TO Learn more</a>
+        </div>
+    </section>
+    <section class="section section-stream">
+        <img src="https://i.ibb.co/TvdbMhQ/play-button.png" alt="" class="play rellax" data-rellax-speed="-1"
+            data-rellax-xs-speed="-5">
+
+        <div class="content rellax" data-rellax-speed="10">
+            <div>
+                <h2 class="secondary-text">Post Your Blogs</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestias unde odit nulla, cumque
+                    excepturi voluptatum dolores cupiditate quod et?</p>
+            </div>
+            <div>
+                <h2 class="secondary-text">See and comment on others Blogs</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestias unde odit nulla, cumque
+                    excepturi voluptatum dolores cupiditate quod et?</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section section-grid">
+        <div class="rellax" data-rellax-speed="1" data-rellax-xs-speed="3">
+            <i class="fa fa-pencil fx-3x secondary-text"></i>
+            <h2>Post <span class="secondary-text dot">.</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ad recusandae ut eius nam voluptatibus
+                quo
+                a odit, debitis voluptatum?</p>
+        </div>
+        <div class="rellax" data-rellax-speed="4" data-rellax-xs-speed="3">
+            <i class="fa fa-users fx-3x secondary-text"></i>
+            <h2>Comment <span class="secondary-text dot">.</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ad recusandae ut eius nam voluptatibus
+                quo
+                a odit, debitis voluptatum?</p>
+        </div>
+        <div class="rellax" data-rellax-speed="7" data-rellax-xs-speed="3">
+            <i class="fa fa-book fx-3x secondary-text"></i>
+            <h2>Learn <span class="secondary-text dot">.</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ad recusandae ut eius nam voluptatibus
+                quo
+                a odit, debitis voluptatum?</p>
+        </div>
+    </section>
+
+    <div class="col">
+        <h2 class="text-center secondary-text mb-5" data-aos="fade-down" data-aos-duration="1000">Blogs . </h2>
+        <div class="row">
+            <section class="section section-grid" data-aos="zoom-out" data-aos-duration="1500">
+                <div class="rellax" data-rellax-speed="1" data-rellax-xs-speed="3" *ngFor="let p of allPosts">
+                    <h2>{{p.Title}}</h2>
+                    <span [innerHTML]="p.Description.substring(0, 50)"></span>... <a class="card-link"
+                        routerLink="/login">Read More</a>
+
+                    <div class="card-body mt-4">
+                        <a class="card-link mt-5">{{p.Date | date: 'MMM dd, yyyy'}}</a>
+                        <a routerLink="/login" class="card-link mt-5"><i
+                                class="fa fa-comment">&nbsp;&nbsp;Comment</i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

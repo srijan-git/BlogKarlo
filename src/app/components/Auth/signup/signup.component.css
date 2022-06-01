@@ -1,5 +1,5 @@
 .background-left {
-    background-color: #2e7cf6;
+    background-color: #2d2254;
     background-image: url('../../../../assets/Sign-Up-BG-Image.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -7,7 +7,7 @@
 }
 
 .background-right {
-    background-color: #2e7cf6;
+    background-color: #2d2254;
 }
 
 .card {
@@ -42,13 +42,13 @@ h2 {
 } */
 
 @media (max-width: 480px) {
-    .background-left{
+    .background-left {
         background-image: none;
     }
 }
 
 @media (max-width: 767px) {
-    .background-left{
+    .background-left {
         background-image: none;
     }
 }

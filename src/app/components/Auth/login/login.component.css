@@ -1,5 +1,6 @@
 .background {
-    background-color: #2e7cf6;
+    /* background-color: #2e7cf6; */
+    background-color: #2d2254;
     height: 100vh;
 }
 
@@ -23,8 +24,8 @@ h1 {
 }
 
 @media (max-width: 767px) {
-    .background{
-        background-color: #2e7cf6;
+    .background {
+        background-color: #2d2254;
         height: auto;
     }
 }
