@@ -21,6 +21,8 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { LoaderComponent } from './Layout/loader/loader.component';
 import { LoaderIntercepterService } from './Services/loader-intercepter.service';
 import { NoAuthViewComponent } from './Layout/no-auth-view/no-auth-view.component';
+import { BloglistComponent } from './components/Admin/bloglist/bloglist.component';
+import { BlogsEditComponent } from './components/Admin/blogs-edit/blogs-edit.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { NoAuthViewComponent } from './Layout/no-auth-view/no-auth-view.componen
     WritersProfileComponent,
     CommentsComponent,
     LoaderComponent,
-    NoAuthViewComponent
+    NoAuthViewComponent,
+    BloglistComponent,
+    BlogsEditComponent
   ],
   imports: [
     BrowserModule,

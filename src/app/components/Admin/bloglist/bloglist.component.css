@@ -1,0 +1,16 @@
+.addrecord {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.btn-light {
+    border: 1px solid black;
+    padding: 0.375rem 2.75rem;
+}
+
+#edit {
+    background-color: navy;
+    color: white;
+    margin-right: 15px;
+}

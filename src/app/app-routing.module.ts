@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BloglistComponent } from './components/Admin/bloglist/bloglist.component';
+import { BlogsEditComponent } from './components/Admin/blogs-edit/blogs-edit.component';
 import { LoginComponent } from './components/Auth/login/login.component';
 import { SignupComponent } from './components/Auth/signup/signup.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
@@ -8,6 +10,7 @@ import { MyBlogsComponent } from './components/my-blogs/my-blogs.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ViewsComponent } from './components/views/views.component';
 import { WritersProfileComponent } from './components/writers-profile/writers-profile.component';
+import { AdminGuard } from './Guard/admin.guard';
 import { AuthGuard } from './Guard/auth.guard';
 import { NoAuthViewComponent } from './Layout/no-auth-view/no-auth-view.component';
 
@@ -38,6 +41,10 @@ const routes: Routes = [
   },
   {
     path: 'noauthview', component: NoAuthViewComponent
+  }, {
+    path: 'AdminblogList', component: BloglistComponent, canActivate: [AdminGuard]
+  }, {
+    path: 'BlogEdit/:id', component: BlogsEditComponent, canActivate: [AdminGuard]
   },
   {
     path: '**', redirectTo: 'home'

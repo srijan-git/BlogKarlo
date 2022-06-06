@@ -21,6 +21,7 @@ export class BlogPostService {
   BlogPostDetails = "https://bog-karlo.herokuapp.com/PostDetails"
   DeleteContent = "https://bog-karlo.herokuapp.com/ContentDelete"
   GetPostContent = "https://bog-karlo.herokuapp.com/getPostContent"
+  EditPostContent = "https://bog-karlo.herokuapp.com/ContentEdit"
 
   ContentCreation(formData, id): Observable<BlogContent[]> {
     return this.http.post<BlogContent[]>(`${this.BlogPostAdd}/${id}`, formData)
@@ -36,6 +37,10 @@ export class BlogPostService {
 
   GetSinglePost(id): Observable<any> {
     return this.http.get<any>(`${this.GetPostContent}/${id}`)
+  }
+
+  updatePost(data): Observable<BlogContent[]> {
+    return this.http.post<BlogContent[]>(this.EditPostContent, data)
   }
 
 }
