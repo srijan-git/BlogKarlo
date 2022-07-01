@@ -1,3 +1,7 @@
+.home {
+    overflow: hidden;
+}
+
 .vl {
     border-right: 1px solid #ddd;
 }

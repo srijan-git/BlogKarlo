@@ -4,6 +4,47 @@
         <div class="col-md-12 mt-5">
             <table class="table table-bordered">
                 <thead>
+                    <tr>
+                        <th colspan="2" class="text-center">Blog Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="card text-blank mt-3" *ngFor="let posts of allPosts">
+                                <div class=" card-body">
+                                    <div class="card-title">
+                                        <h2> {{posts.Title}}</h2>
+                                        <!-- <div class="card-link">
+                                            <p [innerHTML]="posts.Description.substring(0, 50)"></p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    Posted on {{ posts.Date | date: 'MMM dd, yyyy' }}
+                                </div>
+                                <a class="card-footer text-muted" *ngIf="posts.userID != userid"
+                                    routerLink="/writersView/{{posts._id}}">View Writer's Profile</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="card text-blank mt-5" *ngFor="let posts of allPosts">
+                                <div class="card-body mb-3 mt-3">
+                                    <a routerLink="/BlogEdit/{{posts._id}}" type="button" class="btn btn-block"
+                                        id="edit">Edit</a>
+                                    <a type="button" class="btn btn-danger btn-block"
+                                        (click)="deleteblog(posts._id)">Delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- <table class="table table-bordered">
+                <thead>
                     <tr class="text-center">
                         <th scope="col">Blog Details</th>
                     </tr>
@@ -15,17 +56,18 @@
                                 <div class=" card-body">
                                     <div class="card-title">
                                         <h2> {{posts.Title}}</h2>
-                                        <p>
-                                            {{posts.Description}}
-                                        </p>
+                                        <div class="card-link">
+                                            <p [innerHTML]="posts.Description"></p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="card-footer text-muted">
                                     Posted on {{ posts.Date | date: 'MMM dd, yyyy' }}
                                 </div>
-                                <!-- <a class="card-footer text-muted" *ngIf="posts.userID != userid"
-                                    routerLink="/writersView/{{posts._id}}">View Writer's Profile</a> -->
+                                <a class="card-footer text-muted" *ngIf="posts.userID != userid"
+                                    routerLink="/writersView/{{posts._id}}">View Writer's Profile</a>
                             </div>
+
                         </td>
                         <td>
                             <div class="card text-blank mt-5" *ngFor="let posts of allPosts">
@@ -40,4 +82,4 @@
 
                     </tr>
                 </tbody>
-            </table>
+            </table> -->
