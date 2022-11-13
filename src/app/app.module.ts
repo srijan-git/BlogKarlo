@@ -23,6 +23,10 @@ import { LoaderIntercepterService } from './Services/loader-intercepter.service'
 import { NoAuthViewComponent } from './Layout/no-auth-view/no-auth-view.component';
 import { BloglistComponent } from './components/Admin/bloglist/bloglist.component';
 import { BlogsEditComponent } from './components/Admin/blogs-edit/blogs-edit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialDesignModule } from './Layout/material-design/material-design.module';
+import { NavbarComponent } from './components/Admin/navbar/navbar.component';
+import { DashboardComponent } from './components/Admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,9 @@ import { BlogsEditComponent } from './components/Admin/blogs-edit/blogs-edit.com
     LoaderComponent,
     NoAuthViewComponent,
     BloglistComponent,
-    BlogsEditComponent
+    BlogsEditComponent,
+    NavbarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +56,9 @@ import { BlogsEditComponent } from './components/Admin/blogs-edit/blogs-edit.com
     ReactiveFormsModule,
     HttpClientModule,
     AngularEditorModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    MaterialDesignModule,
+    AppRoutingModule,
 
   ],
   providers: [AuthService, { provide: HTTP_INTERCEPTORS, useClass: LoaderIntercepterService, multi: true }],

@@ -5,19 +5,29 @@ import { BlogContent } from '../Class/blog-content';
 import { Comments } from '../Class/comments';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CommentsService {
-  AddingComments = "https://bog-karlo.herokuapp.com/commentCreation";
-  CommentDetails = "https://bog-karlo.herokuapp.com/CommentDetails"
-  // GetCommentsByPostID="http://localhost:3500/commentGet"
-  constructor(private http: HttpClient) { }
+  AddingComments = 'https://cyan-yak-gown.cyclic.app/commentCreation';
+  CommentDetails = 'https://cyan-yak-gown.cyclic.app/CommentDetails';
 
-  CommentCreation(formData, postID: string, userID: string): Observable<Comments[]> {
-    return this.http.post<Comments[]>(`${this.AddingComments}/${postID}/${userID}`, formData)
+  // AddingComments = "https://bog-karlo.herokuapp.com/commentCreation";
+  // CommentDetails = "https://bog-karlo.herokuapp.com/CommentDetails"
+  // GetCommentsByPostID="http://localhost:3500/commentGet"
+  constructor(private http: HttpClient) {}
+
+  CommentCreation(
+    formData,
+    postID: string,
+    userID: string
+  ): Observable<Comments[]> {
+    return this.http.post<Comments[]>(
+      `${this.AddingComments}/${postID}/${userID}`,
+      formData
+    );
   }
   GetAllComments(): Observable<any> {
-    return this.http.get<any>(this.CommentDetails)
+    return this.http.get<any>(this.CommentDetails);
   }
 
   // getCommentsByPostID(id):Observable<any>{

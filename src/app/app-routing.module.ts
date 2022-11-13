@@ -1,3 +1,5 @@
+import { DashboardComponent } from './components/Admin/dashboard/dashboard.component';
+import { NavbarComponent } from './components/Admin/navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BloglistComponent } from './components/Admin/bloglist/bloglist.component';
@@ -41,9 +43,15 @@ const routes: Routes = [
   },
   {
     path: 'noauthview', component: NoAuthViewComponent
-  }, {
+  },
+  // {
+  //   path: 'Dashboard', component: DashboardComponent
+  // },
+  {
     path: 'AdminblogList', component: BloglistComponent, canActivate: [AdminGuard]
-  }, {
+  },
+
+  {
     path: 'BlogEdit/:id', component: BlogsEditComponent, canActivate: [AdminGuard]
   },
   {
