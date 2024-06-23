@@ -9,11 +9,11 @@ import { BlogContent } from '../Class/blog-content';
 export class BlogPostService {
   constructor(private http: HttpClient) {}
 
-  BlogPostAdd = 'https://cyan-yak-gown.cyclic.app/ProductCreation';
-  BlogPostDetails = 'https://cyan-yak-gown.cyclic.app/PostDetails';
-  DeleteContent = 'https://cyan-yak-gown.cyclic.app/ContentDelete';
-  GetPostContent = 'https://cyan-yak-gown.cyclic.app/getPostContent';
-  EditPostContent = 'https://cyan-yak-gown.cyclic.app/ContentEdit';
+  BlogPostAdd = 'https://blogkarlo-api.onrender.com/ProductCreation';
+  BlogPostDetails = 'https://blogkarlo-api.onrender.com/PostDetails';
+  DeleteContent = 'https://blogkarlo-api.onrender.com/ContentDelete';
+  GetPostContent = 'https://blogkarlo-api.onrender.com/getPostContent';
+  EditPostContent = 'https://blogkarlo-api.onrender.com/ContentEdit';
 
   // BlogPostAdd = "https://bog-karlo.herokuapp.com/ProductCreation";
   // BlogPostDetails = "https://bog-karlo.herokuapp.com/PostDetails"

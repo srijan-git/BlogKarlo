@@ -9,11 +9,11 @@ export class AuthService {
   constructor(private http: HttpClient) {}
   loader = new BehaviorSubject<Boolean>(false);
 
-  signupAPIUrl = 'https://cyan-yak-gown.cyclic.app/postForm';
-  signinAPIUrl = 'https://cyan-yak-gown.cyclic.app/postLogin';
-  getallUser = 'https://cyan-yak-gown.cyclic.app/getUserData';
-  getEditedUserData = 'https://cyan-yak-gown.cyclic.app/getEditedUserData';
-  UserUpdate = 'https://cyan-yak-gown.cyclic.app/postuserEdit';
+  signupAPIUrl = 'https://blogkarlo-api.onrender.com/postForm';
+  signinAPIUrl = 'https://blogkarlo-api.onrender.com/postLogin';
+  getallUser = 'https://blogkarlo-api.onrender.com/getUserData';
+  getEditedUserData = 'https://blogkarlo-api.onrender.com/getEditedUserData';
+  UserUpdate = 'https://blogkarlo-api.onrender.com/postuserEdit';
 
   postSignup(formData): Observable<User[]> {
     return this.http.post<User[]>(this.signupAPIUrl, formData);

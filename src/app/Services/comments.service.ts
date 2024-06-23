@@ -8,8 +8,8 @@ import { Comments } from '../Class/comments';
   providedIn: 'root',
 })
 export class CommentsService {
-  AddingComments = 'https://cyan-yak-gown.cyclic.app/commentCreation';
-  CommentDetails = 'https://cyan-yak-gown.cyclic.app/CommentDetails';
+  AddingComments = 'https://blogkarlo-api.onrender.com/commentCreation';
+  CommentDetails = 'https://blogkarlo-api.onrender.com/CommentDetails';
 
   // AddingComments = "https://bog-karlo.herokuapp.com/commentCreation";
   // CommentDetails = "https://bog-karlo.herokuapp.com/CommentDetails"
